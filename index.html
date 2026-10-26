@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="The portfolio of Your Name, a developer building thoughtful web experiences."
+  >
+  <title>Your Name | Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="#home" aria-label="Your Name, home">Your Name</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      Menu
+    </button>
+    <nav id="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section id="about-me" aria-labelledby="about-heading">
+      <h1 id="about-heading">Hello, I’m Your Name</h1>
+      <p>
+        I’m a developer who enjoys building accessible, reliable, and useful
+        web applications. I’m currently focused on learning and creating
+        projects with modern web technologies.
+      </p>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+
+      <div class="filters" role="group" aria-label="Filter projects by category">
+        <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+        <button type="button" class="filter-btn" data-filter="design" aria-pressed="false">Design</button>
+      </div>
+      <p id="filter-status" class="visually-hidden" role="status"></p>
+
+      <article data-category="web">
+        <h3>Project One</h3>
+        <figure>
+          <img
+            src="images/project-one.jpg"
+            alt="Screenshot of Project One showing its main dashboard"
+            loading="lazy"
+          >
+          <figcaption>A short description of what Project One does.</figcaption>
+        </figure>
+        <p>Describe the problem this project solves and the technologies used.</p>
+        <a href="https://example.com">View Project One</a>
+      </article>
+
+      <article data-category="design">
+        <h3>Project Two</h3>
+        <figure>
+          <img
+            src="images/project-two.jpg"
+            alt="Screenshot of Project Two showing its main interface"
+            loading="lazy"
+          >
+          <figcaption>A short description of what Project Two does.</figcaption>
+        </figure>
+        <p>Describe your contribution and what you learned while building it.</p>
+        <a href="https://example.com">View Project Two</a>
+      </article>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Git and GitHub</li>
+        <li>Responsive and accessible design</li>
+      </ul>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>
+        Email me at <a href="mailto:you@example.com">you@example.com</a>,
+        or send a message using the form below.
+      </p>
+
+      <form action="#" method="post" novalidate>
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+          <p class="error" id="name-error"></p>
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+            aria-describedby="email-error"
+          >
+          <p class="error" id="email-error"></p>
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message"           rows="5" required aria-describedby="message-error"></textarea>
+                    <p class="error" id="message-error"></p>
+                  </div>
+
+                  <button type="submit">Send message</button>
+                  <p id="form-status" role="status"></p>
+                </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Your Name</p>
+  </footer>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Project image" hidden>
+    <button type="button" class="lightbox-close" aria-label="Close image">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
